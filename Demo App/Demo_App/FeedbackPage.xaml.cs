@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using Syncfusion.SfSchedule;
+//using Syncfusion.SfSchedule;
 using Telerik.XamarinForms.Input;
-using Syncfusion.ListView.XForms;
+//using Syncfusion.ListView.XForms;
 using System.Collections.ObjectModel;
 using Demo_App.Model;
 using System.Net;
