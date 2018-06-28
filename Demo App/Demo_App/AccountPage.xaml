@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Account"
+             x:Class="Demo_App.AccountPage">
+    <ContentPage.Content>
+       
+        <TableView Intent="Settings" RowHeight="70">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="setting.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Settings"
+                              TextColor="Black" />
+                            <Image HeightRequest="20" WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Settings_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="setting.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Staff"
+                              TextColor="Black" />
+                            <Image HeightRequest="20"  WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Staff_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="setting.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Service"
+                              TextColor="Black" />
+                            <Image HeightRequest="20" WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Service_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="setting.png" WidthRequest="50" HeightRequest="50"/>
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Service Categories"
+                              TextColor="Black" />
+                            <Image HeightRequest="20" WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ServiceCategories_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="logout.png" WidthRequest="50" HeightRequest="50"/>
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Log Out"
+                              TextColor="Black" />
+                            <Image HeightRequest="20" WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LogOut_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+
+                <!--<TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="setting.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Notification"
+                              TextColor="Black" />
+                            <Image HeightRequest="20" WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Notification_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image  Source="appointment_Slot.png" WidthRequest="50" HeightRequest="50" />
+                            <Label Margin="0,20,0,0" HorizontalOptions="Center" Text="Passcode Lock"
+                              TextColor="Black" />
+                            <Image HeightRequest="20" WidthRequest="20" Source="left_arrow.png"
+                              HorizontalOptions="EndAndExpand"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="PasscodeLock_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>-->
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+    

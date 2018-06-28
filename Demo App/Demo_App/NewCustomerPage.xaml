@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:Demo_App.Behaviors"
+             x:Class="Demo_App.NewCustomerPage"
+             Title="New Customer">
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem x:Name="CreateCustomerButton" Text="New Customer" Clicked="AddCustomer"></ToolbarItem>-->
+        <ToolbarItem Text="Create" Order="Primary" Priority="0" Clicked="AddCustomer"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <ScrollView>
+                <Grid RowSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Padding="10,10,0,0" BackgroundColor="White">
+                        <Grid ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0">
+                                <Label Text="Name" HorizontalOptions="Start"></Label>
+                                <Entry x:Name="CustomerName"  Placeholder="Customer Name" FontSize="Small">
+                                    <Entry.Behaviors>
+                                        <behaviors:EntryValidatorBehavior x:Name="CodeValidator"/>
+                                    </Entry.Behaviors>
+                                </Entry>
+                            </StackLayout>
+                            <Image VerticalOptions="End" Grid.Column="1" HeightRequest="20" WidthRequest="20">
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image"
+                                 Binding="{Binding Source={x:Reference CodeValidator}, Path=IsValid}"
+                                 Value="True">
+                                        <Setter Property="Source" Value="success.png" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Image"
+                                 Binding="{Binding Source={x:Reference CodeValidator}, Path=IsValid}"
+                                 Value="False">
+                                        <Setter Property="Source" Value="error.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Padding="10,10,0,0" BackgroundColor="White">
+                        <Grid ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0">
+                                <Label Text="Email" HorizontalOptions="Start"></Label>
+                                <Entry x:Name="CustomerEmail"  Placeholder="Email" FontSize="Small" HorizontalOptions="FillAndExpand">
+                                    <Entry.Behaviors>
+                                        <behaviors:EmailValidatorBehavior x:Name="CodeValidators"/>
+                                    </Entry.Behaviors>
+                                </Entry>
+                            </StackLayout>
+                            <Image VerticalOptions="End" Grid.Column="1" HeightRequest="20" WidthRequest="20">
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image"
+                                 Binding="{Binding Source={x:Reference CodeValidators}, Path=IsValid}"
+                                 Value="True">
+                                        <Setter Property="Source" Value="success.png" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Image"
+                                 Binding="{Binding Source={x:Reference CodeValidators}, Path=IsValid}"
+                                 Value="False">
+                                        <Setter Property="Source" Value="error.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <!--<TimePicker x:Name="duration" HorizontalOptions="FillAndExpand" TextColor="Gray"/>-->
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Padding="10,10,0,0" BackgroundColor="White">
+                        <Label Text="Phone Number (optional)" HorizontalOptions="Start"></Label>
+                        <Entry x:Name="CustomerPhoneNumber"  Text="+91" Placeholder="XXXX-XXXX" FontSize="Small"/>
+                        <!--<TimePicker x:Name="BufferTime" HorizontalOptions="FillAndExpand" TextColor="Gray"/>-->
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Padding="10,10,0,0" BackgroundColor="White">
+                        <Label Text="Address" HorizontalOptions="Start"></Label>
+                        <Entry x:Name="CustomerAddress"  Placeholder="Address" FontSize="Small"/>
+                        <!--<StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="AddressClick"/>
+                        </StackLayout.GestureRecognizers>-->
+                    </StackLayout>
+                    <StackLayout Grid.Row="4"></StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
