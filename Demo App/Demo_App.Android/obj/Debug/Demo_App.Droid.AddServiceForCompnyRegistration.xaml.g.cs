@@ -11,8 +11,8 @@
 namespace Demo_App {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Gurmeet\\Clone_29-June-2018\\XamarinBookingManager1.0\\Demo App\\Demo_App\\AddServi" +
-        "ceForCompnyRegistration.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Officials\\XamarinBookingManager1.0 Latest Clone 05-July-2018\\Demo App\\Demo_App" +
+        "\\AddServiceForCompnyRegistration.xaml")]
     public partial class AddServiceForCompnyRegistration : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

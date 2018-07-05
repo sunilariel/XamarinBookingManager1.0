@@ -11,8 +11,8 @@
 namespace Demo_App {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Gurmeet\\Clone_29-June-2018\\XamarinBookingManager1.0\\Demo App\\Demo_App\\EditServ" +
-        "iceDetails.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Officials\\XamarinBookingManager1.0 Latest Clone 05-July-2018\\Demo App\\Demo_App" +
+        "\\EditServiceDetails.xaml")]
     public partial class EditServiceDetails : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

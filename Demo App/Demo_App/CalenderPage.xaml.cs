@@ -709,7 +709,8 @@ namespace Demo_App
 
                 string weekDateDay = week[0];
 
-                Application.Current.MainPage.Navigation.PushAsync(new SetAppointmentPage(selectesPageN, empName, weekDateDay));
+                await Application.Current.MainPage.Navigation.PushAsync(new SetAppointmentPage(selectesPageN, empName, weekDateDay));
+                DependencyService.Get<IProgressInterface>().Hide();
             }
             catch (Exception ex)
             {
@@ -770,6 +771,7 @@ namespace Demo_App
                 string weekDateDay = week[0];
 
                 await Application.Current.MainPage.Navigation.PushAsync(new SetAppointmentPage(selectesPageN, empName, weekDateDay));
+                DependencyService.Get<IProgressInterface>().Hide();
             }
             catch (Exception ex)
             {

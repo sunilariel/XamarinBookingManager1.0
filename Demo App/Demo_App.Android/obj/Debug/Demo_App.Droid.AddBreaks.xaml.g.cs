@@ -11,8 +11,8 @@
 namespace Demo_App {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Gurmeet\\Clone_29-June-2018\\XamarinBookingManager1.0\\Demo App\\Demo_App\\AddBreak" +
-        "s.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Officials\\XamarinBookingManager1.0 Latest Clone 05-July-2018\\Demo App\\Demo_App" +
+        "\\AddBreaks.xaml")]
     public partial class AddBreaks : global::Rg.Plugins.Popup.Pages.PopupPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
