@@ -657,10 +657,12 @@ namespace Demo_App
             }
         }
 
-        public void LeftNavigateArrow_ClickEvent(object sender, EventArgs e)
+        public async void LeftNavigateArrow_ClickEvent(object sender, EventArgs e)
         {
             try
             {
+                DependencyService.Get<IProgressInterface>().Show();
+                await Task.Delay(5000);
                 var cW = week;
 
                 var dwe = cW[0];
@@ -719,7 +721,8 @@ namespace Demo_App
         {
             try
             {
-
+                DependencyService.Get<IProgressInterface>().Show();
+                await Task.Delay(5000);
                 var cW = week;
 
                 var dwe = cW[6];

@@ -9,18 +9,20 @@ using Xamarin.Forms;
 namespace Demo_App
 {
     public partial class App : Application
-	{
+    {
         static public int ScreenHeight;
-        public App ()
-		{          
+        public App()
+        {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDYxMUAzMTM2MmUzMjJlMzBvMWo3aVRIWGF6UzRGMzdxYUZ2b0cvQzJnOGtpZnNUSzVBYVAvMU1UcEJzPQ==");
             InitializeComponent();
             DependencyService.Register<IProgressInterface>();
-            
-            SetMainPage();           
+
+            SetMainPage();
         }
 
         public static void SetMainPage()
-        {                      
+        {
             //Current.MainPage = new NavigationPage(new SetAppointmentPage());
             Current.MainPage = new NavigationPage(new WelcomePage());
 
@@ -46,19 +48,19 @@ namespace Demo_App
             //};
         }
 
-        protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }
